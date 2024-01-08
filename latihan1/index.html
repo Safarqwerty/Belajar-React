@@ -18,14 +18,15 @@
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
 
-        function Header() {
-            return (<h1>Mari Besama-sama Belajar React</h1>);
+        function Header(props) {
+            return (<h1>Mari Besama-sama Belajar {props.nama}</h1>);
         }
 
         function HomePage() {
             return (
                 <>
-                <Header/>
+                <Header nama="React"/>
+                <Header nama="Laravel"/>
                 </>
             )
         }
