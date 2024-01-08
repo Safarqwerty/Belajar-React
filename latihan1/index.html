@@ -17,7 +17,13 @@
 
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container);
-        root.render(<h1>Mari Besama-sama Belajar React</h1>);
+        root.render(
+            <>
+                <h1>Mari Besama-sama Belajar React</h1>
+                <img src="img/prof.png" width="50" alt="Saparuddin S.Kom"/>
+                <p onClick={e => {alert('Hallo Guys')}}>React itu keren sekali kan?</p>
+            </>
+            );
 
     </script>
     <!--
