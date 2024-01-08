@@ -23,10 +23,17 @@
         }
 
         function HomePage() {
+            const students = ['Sapar', 'Zuhair', 'Muammar'];
             return (
                 <div>
                     <Header />
-                    <Header nama="Laravel" />
+                    <ul>
+                        {
+                            students.map((student) => (
+                                <li key={student}>{student}</li>
+                            )) 
+                        }
+                    </ul>
                 </div>
             )
         }
