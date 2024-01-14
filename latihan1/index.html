@@ -30,6 +30,18 @@
             <div className="counter-text">{count}</div>
         );
 
+        function Jam() {
+            const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+
+            React.useEffect(function() {
+                setInterval(() => {
+                    setTime(new Date().toLocaleTimeString())
+                }, 1000)
+            }, [])
+            
+            return (<p>Jam : {time}</p>)
+        }
+
         function Header({ nama }) {
             return (<h1>Mari Besama-sama Belajar {nama ? nama : 'React'}</h1>);
         }
@@ -79,6 +91,7 @@
                         <Button label="Reset" onClick={handleReset} />
                         <Button label="+" onClick={handleAdd} />
                     </div>
+                    <Jam />
                 </div>
             )
         }
